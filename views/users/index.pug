@@ -1,0 +1,13 @@
+extends ../layout/common.pug
+
+block content
+    a(href="/users/create") New User
+    form(action="/users/search", method="GET")
+        input(type="text", name="name")
+        button Search
+    ul
+        each i in users
+            li
+                span= i.name
+                span &nbsp;
+                a(href="/users/" + i.id) View
