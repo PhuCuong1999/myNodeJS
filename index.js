@@ -15,11 +15,11 @@ app.use(
 
 app.use(express.json());
 
-app.get('/', (req, res) => {
-  res.render('index', {
-    name : 'Cường'
-  })
-})
+// app.get('/', (req, res) => {
+//   res.render('index', {
+//     name : 'Cường'
+//   })
+// })
 
 app.use('/users', userRoute)
 
